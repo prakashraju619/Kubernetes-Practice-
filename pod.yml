@@ -1,0 +1,8 @@
+apiversion: v1.0
+kind: Pod   
+metedata:
+  name: First-pod
+spec:
+  - contianer:
+    image: nginx
+    name: nginx-pod
