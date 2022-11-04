@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: label-pod 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+     app: myapp 
+  template:
+    metadata:
+      name: labels-pod
+      labels:
+       app: myapp
+    spec:
+      containers:
+      - image: nginx
+        name: nginx    
+      nodeSelector:
+        app: myapp
+
+
+  #kubectl create -f filename
+  #kubectl label node nodename key=value
+ 

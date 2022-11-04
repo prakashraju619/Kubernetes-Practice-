@@ -1,0 +1,17 @@
+Taints and Tolerations:
+--------------------------
+** To check any taints on exiting pods    
+   kubectl describe nodes <nodename>
+
+** Adding taint to nodes
+kubectl taint nodes <nodname> key=value:NoSchedule (value can be changed)
+
+Label Selector:
+------------------------
+Add nodeSelector under spec section in pod file 
+
+** Adding Label  to nodes
+kubectl label nodes <nodename> key=keyvalue
+
+** To get list label nodes
+kubectl get nodes --show-labels
